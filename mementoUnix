@@ -1,0 +1,65 @@
+Memento Unix
+
+#Memento on how to use Unix correctly
+#Commands dictionnary
+#Data Search
+
+#Formalism
+#:Primary key word/expression -> secundary keys words separate by ",":command/file
+#Description datas.
+
+
+:/etc/passwd -> passwd,username,password,uuid,guid,home directory,shell:file
+/etc/passwd est un fichier répertoriant les mots de passes utilisateurs
+7 champs séparer par un ":" 
+les champs sont dans l'ordre "1nom_utilisateur:2mot_de_passe:3uuid:4guid:5commentaire:6home:7shell"
+
+:/etc/shadow -> shadow,username,passwd print,passwd option,passwd:file
+9 champs séparer par un ":" 
+les champs sont dans l'ordre "1nom_utilisateur:2empreinte_du_mot_de_passe:3jours_de_def_du_mdp:4nombre_de_jours_pour_changer_mdp:5avant_quand_le_mdp_doit_etre_changer:6avertissement:7expiration:8nombre_de_jours_expirer:9utilitéfuture"
+
+:passwd -> passwd,change:command
+La commande passwd permet 
+à un utilisateur de changer son mot de passe 
+à l'administrateur de changer le mot de passe de n'importe quel utilisateur, de désactiver/activer un compte (options -u et -l) ou de régler les paramètres du compte (option -x par exemple). 
+
+:/etc/group -> group,gid,usergroup:file
+Le fichier group contient des lignes de 4 champs séparer par des ":"
+"1group_nom:2goupe_mdp:gid:usergroup"
+
+:getent passwd -> command,select user,select passwd,select:command
+sort la ligne de l'utilisateur passé en paramètres
+
+:who -> connecte:command
+sort la liste des personnes connectés
+
+:man -> manuel,aide:command
+montre le manuel de la commande passé en paramètres
+
+:ps -x -> execution:command
+affiche les programmes en cours d'execution
+
+:mount -> monter,disque dur,partition:command
+permer de voir et de monter des partitions sur les disques
+
+:df -> remplissage,disque:command
+indique le taux de remplissage des différents montages
+
+:du -> usage,disque:command
+affiche l'usage des disques et fichier passer en argument
+
+:chmod -> droit,acces,fichier:command
+donner des droits à un fichier selon "[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+"
+
+:umask -> droit,acces,fichier:command
+complément à 1 des droits d'accès
+
+:chown -> proprietaire,fichier:command
+permet de changer le proprietaire d'un fichier
+
+:chgrp -> proprietaire,groupe:command
+permet de changer le proprietaire d'un groupe
+
+:#end
+
+
